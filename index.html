@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel's Birthday Celebration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+<body>
+    <!-- Confetti Canvas (for February 28th) -->
+    <canvas id="confetti-canvas" class="confetti-canvas"></canvas>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">🎂 Angel is Turning 23! 🎂</h1>
+            <p class="hero-subtitle">February 28th, 2026</p>
+            
+            <!-- Birthday Tradition Line -->
+            <p id="countdown-label" style="font-size: 1rem; color: var(--accent-blue); margin-bottom: 30px; font-weight: 500;">Celebrating Angel's 23rd Birthday — 2026</p>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">0</div>
+                    <div class="countdown-label" id="days-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">0</div>
+                    <div class="countdown-label" id="hours-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">0</div>
+                    <div class="countdown-label" id="minutes-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">0</div>
+                    <div class="countdown-label" id="seconds-label">Seconds</div>
+                </div>
+            </div>
+
+            <div class="hero-message" id="hero-message">
+                <p>Tech Enthusiast • Lover of God • Singer • Researcher • Coder • App Creator • Innovative Mind</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Angel Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2>About Angel 🎂</h2>
+            <div class="about-content">
+                <div class="about-main">
+                    <h3>Angel Ejiofor</h3>
+                    <p class="about-age">Turning 23 • February 28th, 2026</p>
+                    <p class="about-bio">Tech enthusiast, lover of God, singer, researcher, coder, app creator, and an innovative creative mind with a passion for excellence.</p>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h4>What She Loves</h4>
+                        <ul>
+                            <li>Singing and listening to music</li>
+                            <li>Research and writing code</li>
+                            <li>Creating apps and being innovative</li>
+                            <li>Studying and learning new things</li>
+                            <li>Surrounding herself with people of her energy</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h4>What She Loves About Herself</h4>
+                        <ul>
+                            <li>Her beautiful eyes</li>
+                            <li>Her lovely smile</li>
+                            <li>The way she laughs</li>
+                            <li>Her lips</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h4>Her Favorite Foods</h4>
+                        <ul>
+                            <li>Ofe Nsala</li>
+                            <li>Oha Soup with Amala</li>
+                            <li>Yoruba Stew</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h4>Her Philosophy</h4>
+                        <p class="quote">"I am a happy soul and I exist to be happy. I love my peace and anything that brings me joy. Please don't come into my life to offend me or make me sad. If you can't treat me like my daddy, my brothers, and Mr Ifeanyi — don't bother."</p>
+                    </div>
+                </div>
+
+                <div class="fun-fact">
+                    <h4>Fun Fact About Angel 😄</h4>
+                    <p>She hasn't washed her own clothes since 2024 and is proud of it — that's what dry cleaners are for! (Strategic life choices for the ambitious woman!)</p>
+                </div>
+
+                <div class="friendship-note">
+                    <h4>A Note on Friendships</h4>
+                    <p>Angel is selective with friendships because she values depth over quantity. She'd rather have a few genuine connections than many superficial ones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Mantra Section -->
+    <section class="mantra-section">
+        <div class="container">
+            <h2>Daily Mantras of Angel 🎂</h2>
+            <div class="mantra-content">
+                <p class="mantra-header">My name is Angel Ejiofor</p>
+                <ul class="mantra-list">
+                    <li>I am aligned with the energy of success</li>
+                    <li>Abundance flows to me effortlessly</li>
+                    <li>I attract love and harmonious relationships</li>
+                    <li>I fully trust the universe's plan for me</li>
+                    <li>I am on the right path to achieve my goals</li>
+                    <li>I am a magnet for opportunities and prosperity</li>
+                    <li>Everything I need is available to me now</li>
+                    <li>I am open to receiving all the good life has to offer</li>
+                    <li>My thoughts and emotions are aligned with my desires</li>
+                    <li>Money flows to me from multiple sources</li>
+                    <li>I am grateful for the abundance I have</li>
+                    <li>My life is full of love, success, and prosperity</li>
+                    <li>I have everything I need to be happy and successful</li>
+                    <li>Each day I am getting closer to my goals</li>
+                    <li>I vibrate at the frequency of abundance and inner peace</li>
+                    <li>I am worthy of all the love and success I receive</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivation Section -->
+    <section class="motivation-section">
+        <div class="container">
+            <h2>A Moment of Inspiration 🎂</h2>
+            <div class="motivation-quote">
+                <p>"Our deepest fear is not that we are inadequate. Our deepest fear is that we are powerful beyond measure. We ask ourselves, who am I to be brilliant, gorgeous, talented, and fabulous? Actually, who are you not to be? We are born to make manifest the glory of God that is within us. As we let our own light shine, we unconsciously give other people permission to do the same."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message to Future Self -->
+    <section class="future-self-section">
+        <div class="container">
+            <h2>A Message to My 23-Year-Old Self 💌</h2>
+            <div class="future-self-content">
+                <p>Dear Angel, I know that right now things are tough. You are turning 23 and it comes with so much — as beautiful and mind-blowing as it is. For years you used to say you were older than you were, until last year when you finally accepted that you are still 22, and realized you still have so much time to do everything you want in life. And I want you to know that you are still going to become a billionaire, because you know it is within you.</p>
+                
+                <p>You have always believed in yourself. You have always been strong, humble, honest, beautiful inside and out, and incredibly smart, creative, and innovative. I am so proud of the woman you have become. I want you to come back to this message one day and say — oh my God, you did it.</p>
+                
+                <p>Today is February 25th 2026, and I am telling you — hold on. Everything is going to be fine. Life is a big fight but you have to keep pushing. Keep being honest, keep being humble, don't lose focus. Be studious and be the good girl you have always been. You were made for greatness Angel. Don't you ever forget that.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2>Birthday Gallery 📸</h2>
+            <p class="gallery-subtitle">Upload your favorite photos of Angel</p>
+            
+            <div class="upload-area" id="upload-area">
+                <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+                <p>Click or drag photos here</p>
+                <input type="file" id="photo-input" multiple accept="image/*" hidden>
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Photos will be added here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Birthday Wishlist Section -->
+    <section class="wishlist-section">
+        <div class="container">
+            <h2>What Angel Wants for Her 23rd 🎁</h2>
+            <p class="wishlist-subtitle">This is what Angel wants for her birthday</p>
+            
+            <ul class="wishlist" id="wishlist-items">
+                <li class="wishlist-item" data-item-name="GuineaFowl weird cravings very important — ₦18,000">
+                    <span class="wishlist-item-text">GuineaFowl weird cravings very important — ₦18,000</span>
+                </li>
+                <li class="wishlist-item" data-item-name="Jewellery">
+                    <span class="wishlist-item-text">Jewellery</span>
+                </li>
+                <li class="wishlist-item" data-item-name="Skincare and collagen">
+                    <span class="wishlist-item-text">Skincare and collagen</span>
+                </li>
+                <li class="wishlist-item" data-item-name="Two-piece outfits">
+                    <span class="wishlist-item-text">Two-piece outfits</span>
+                </li>
+                <li class="wishlist-item" data-item-name="A cute pair of slippers — ₦16,000">
+                    <span class="wishlist-item-text">A cute pair of slippers — ₦16,000</span>
+                </li>
+                <li class="wishlist-item" data-item-name="Cute feminine sneakers">
+                    <span class="wishlist-item-text">Cute feminine sneakers</span>
+                </li>
+                <li class="wishlist-item" data-item-name="A one-piece jumpsuit">
+                    <span class="wishlist-item-text">A one-piece jumpsuit</span>
+                </li>
+                <li class="wishlist-item" data-item-name="One month gym membership — ₦30,000">
+                    <span class="wishlist-item-text">One month gym membership — ₦30,000</span>
+                </li>
+                <li class="wishlist-item" data-item-name="One month supply of Big Ever water">
+                    <span class="wishlist-item-text">One month supply of Big Ever water</span>
+                </li>
+                <li class="wishlist-item" data-item-name="Pringles — non-negotiable!">
+                    <span class="wishlist-item-text">Pringles — non-negotiable!</span>
+                </li>
+                <li class="wishlist-item" data-item-name="Money gifts — very welcome!">
+                    <span class="wishlist-item-text">Money gifts — very welcome!</span>
+                </li>
+                <li class="wishlist-item" data-item-name="A flower bouquet — she has never received flowers before and she deserves them">
+                    <span class="wishlist-item-text">A flower bouquet — she has never received flowers before and she deserves them</span>
+                </li>
+                <li class="wishlist-item" data-item-name="Hair appointment — ₦18,000">
+                    <span class="wishlist-item-text">Hair appointment — ₦18,000</span>
+                </li>
+                <li class="wishlist-item" data-item-name="Nail fix — ₦8,000">
+                    <span class="wishlist-item-text">Nail fix — ₦8,000</span>
+                </li>
+                <li class="wishlist-item" data-item-name="Lashes — ₦5,000">
+                    <span class="wishlist-item-text">Lashes — ₦5,000</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Gratitude Section -->
+    <section class="gratitude-section">
+        <div class="container">
+            <h2>Gratitude 🙏</h2>
+            <div class="gratitude-content">
+                <p>I am grateful for growth. I am grateful that I am becoming a better person with a clearer vision. I am grateful that I am able to pursue my dreams. I am grateful to God, to the universe, to my parents, my siblings, my boss, and my family.</p>
+                
+                <p>I am grateful for life. I am grateful that I am smart, strong, and alive. I am especially grateful for Favour, Daniel, and Jack — important parts of my story.</p>
+                
+                <p>And I am grateful for Mr Ifeanyi and Musa, my bosses, who have played a big role in my journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- People I Will Never Forget Section -->
+    <section class="never-forget-section">
+        <div class="container">
+            <h2>People I Will Never Forget ❤️</h2>
+            <div class="never-forget-content">
+                <p>If I become a billionaire — and I will — these are the people I will never forget: My mommy, my daddy, my brothers, my sister, my cousins, my friends, Aunty Julie, Aunty Justina, Aunty Eli, and Aunty Stella.</p>
+                
+                <p class="emphasis">These four aunties are very important to me. I may not talk to them every day but I think about them every single day. I love them so much and I pray the universe blesses me so I can spoil them and make them proud.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Favorite People Section -->
+    <section class="favorite-people-section">
+        <div class="container">
+            <h2>My Favorite People 💕</h2>
+            <div class="favorite-people-note">
+                <p>These are the people who hold a special place in Angel's heart. No matter how good you are, if you ever choose to become an enemy, your name will no longer have a place here. Cherish the love while it lasts. 💙</p>
+            </div>
+            <div class="favorite-people-grid">
+                <p>Her daddy</p>
+                <p>Her mommy</p>
+                <p>Aunty Blessing</p>
+                <p>Her brother Chukwudi</p>
+                <p>Chinonso</p>
+                <p>Valentine</p>
+                <p>Chidera</p>
+                <p>Chinaza</p>
+                <p>Mr Ifeanyi</p>
+                <p>Esther</p>
+                <p>Obiora</p>
+                <p>Ada (Paris)</p>
+                <p>Onyii (Atueyi booboo)</p>
+                <p>My boss Musa (Dagash) — he is Igbo not Hausa</p>
+                <p>Som</p>
+                <p>Favour Eze</p>
+                <p>Favour</p>
+                <p>Daniel</p>
+                <p>Ilyas</p>
+                <p>Precious (Neche)</p>
+                <p>Juliet</p>
+                <p>Auntie July</p>
+                <p>Aunty Stella</p>
+                <p>Auntie Justina</p>
+                <p>Auntie Eli</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Birthday Wishes Section -->
+    <section class="wishes-section">
+        <div class="container">
+            <h2>Leave Birthday Wishes 💌</h2>
+            <p class="wishes-subtitle">Send Angel a message and tell her what you love about her!</p>
+            
+            <form id="wishes-form" class="wishes-form" action="https://formspree.io/f/xzdaoopn" method="POST">
+                <input type="hidden" name="_replyto" value="angel.ejiofor@outlook.com">
+                <input type="text" id="name-input" name="from_name" placeholder="Your name" required maxlength="50">
+                <textarea id="message-input" name="message" placeholder="Write your birthday wish for Angel..." required maxlength="500"></textarea>
+                <button type="submit" class="submit-btn">Send Birthday Wish</button>
+            </form>
+
+            <div id="form-message" class="form-message"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made with 💙 for Angel's 23rd Birthday</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
